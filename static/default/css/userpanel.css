@@ -1,0 +1,575 @@
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    overscroll-behavior-x: none;
+}
+
+body[data-sidebar-size=default] [data-simplebar] {
+    overflow-y: auto;
+}
+
+.b-overlay {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.table-sm>:not(caption)>*>* {
+    line-height: 1rem;
+    vertical-align: middle;
+}
+
+.file-drop-control {
+    min-height: 150px;
+    height: auto;
+    width: 100%;
+    border-style: dashed;
+    border-width: 3px;
+    border-color: transparent;
+    position: relative;
+    background: #daeaff;
+    border-color: #cacaca;
+}
+
+.file-drop-control.active, .file-drop-control:hover {
+    background: #e7e7e7;
+    border-color: #8f8f8f;
+}
+.file-drop-control input[type=file]{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.modal {
+    background-color: #00000080;
+}
+
+.form-floating .input-group-text {
+    position: absolute;
+    top: 0.9em;
+    right: 2em;
+    background: none;
+    border: none;
+}
+
+.offcanvas-auto {
+    width: auto;
+}
+
+.offcanvas-auto.show{
+    visibility: visible !important;
+}
+
+.auth-fluid .auth-fluid-form-box {
+    padding: 0rem 2rem;
+}
+
+.readonlytime{
+    border: none;
+    outline: none;
+    width: 100px;
+    color: inherit;
+    margin-right: -30px;
+}
+
+
+.attendance_editor{
+    width: 200px;
+    margin-bottom: 1em;
+    justify-content: center;
+    text-align: center;
+}
+.attendance_editor .photo{
+    width: 200px;
+    height: 280px;
+    font-size: 140px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: aquamarine;
+}
+.attendance_editor .photo:hover{
+    background-size: cover;
+}
+
+.list_no_image_icon{
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+}
+.maxcontent {
+    min-width: max-content;
+}
+.icon_holder i, .icon_holder svg{
+    font-size: 2rem;
+}
+@media screen and (min-width: 992px) {
+    .offcanvas-auto {
+        max-width: 95%;
+    }
+    .vw-90{
+        width: 90vw;
+    }
+}
+
+.d-flex.centered{
+    justify-content: center;
+    align-items: center;
+}
+.d-flex.end{
+    justify-content: flex-end;
+    align-items:flex-end
+}
+
+.showonmouseover:hover{
+    opacity: 100;
+}
+
+.bggray{
+    background-color: #cbcbcb;
+}
+
+.dropdown-menu{
+    max-height: calc(100vh - 70px );
+    overflow-y: auto;
+}
+
+.vw50{
+    width: 50vw;
+}
+
+.vw70{
+    width: 70vw;
+}
+
+.vw80{
+    width: 80vw;
+}
+
+.vw90{
+    width: 90vw;
+}
+
+.map {
+    width:100%;
+    height: 100%;
+    min-height: 300px;
+    max-height: 100%;
+    display: block;
+}
+
+.summary_grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.bg-faint{
+    background-color: #ffeeff!important;
+}
+
+.file-div{
+    margin: auto;
+    height: auto;
+    width: 100px;
+}
+.file-div a{
+    max-height: 70px;
+    overflow: auto;
+    display: block;
+}
+
+.summary dt{
+    text-align: start;
+    float: left;
+}
+.summary dd{
+    text-align: end;
+    float: right;
+}
+
+.blog_editor{
+    width: 100%;
+    height: 100vh;
+    border: inset gray;
+    border-radius: 10px;
+}
+
+
+/*START vue-star-rating */
+
+.vue-star-rating-star {
+    overflow: visible !important;
+}
+
+.vue-star-rating-star-rotate {
+    transition: all .25s;
+}
+
+.vue-star-rating-star-rotate:hover {
+    transition: transform 0.25s;
+    transform: rotate(-15deg) scale(1.3)
+}
+
+.vue-star-rating-star {
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vue-star-rating-pointer {
+    cursor: pointer;
+}
+
+.vue-star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.vue-star-rating-inline {
+    display: inline-flex;
+}
+
+.vue-star-rating-rating-text {
+    margin-left: 7px;
+}
+
+.vue-star-rating-rtl {
+    direction: rtl;
+}
+
+.vue-star-rating-rtl .vue-star-rating-rating-text {
+    margin-right: 10px;
+    direction: rtl;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.vue-star-rating-star {
+    display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vue-star-rating-pointer {
+    cursor: pointer;
+}
+
+.vue-star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.vue-star-rating-inline {
+    display: inline-flex;
+}
+
+.vue-star-rating-rating-text {
+    margin-left: 7px;
+}
+
+.vue-star-rating-rtl {
+    direction: rtl;
+}
+
+.vue-star-rating-rtl .vue-star-rating-rating-text {
+    margin-right: 10px;
+    direction: rtl;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*END vue-star-rating */
+
+/* knob-control */
+
+@keyframes dash-frame {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+.knob-control__range {
+    fill: none;
+    transition: stroke .1s ease-in;
+}
+.knob-control__value {
+    animation-name: dash-frame;
+    animation-fill-mode: forwards;
+    fill: none;
+}
+.knob-control__text-display {
+    font-size: 1.3rem;
+    text-align: center;
+}
+/* knob-control */
+
+.height-200{
+    min-height: 200px !important;  
+}
+  
+.my-editor {
+    /* we dont use `language-` classes anymore so thats why we need to add background and text color manually */
+    background: #2d2d2d;
+    color: #ccc;
+
+    /* you must provide font-family font-size line-height. Example:*/
+    font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px;
+}
+
+  /* optional class for removing the outline */
+.prism-editor__textarea:focus {
+    outline: none;
+}
+
+.logo-box .logo img{
+    max-height: 60px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.content-page {
+    padding: 70px 0px 0px 0px;
+}
+
+.session-details .border-bottom {
+    border-bottom: 1px solid #e5e8eb59!important;
+}
+
+.supportagents_list img, .user_icon{
+    height: 42px;
+    width: 42px;
+}
+
+.search-bar span{
+    z-index: 0;
+}
+
+.nav-user img{
+    height: 40px;
+    width: 40px;
+}
+.nav-user img:hover{
+    height: 50px;
+    width: 50px;
+}
+
+.iamonline{
+    -webkit-box-shadow: 0px 0px 9px 3px #00ff00;
+    -moz-box-shadow: 0px 0px 9px 3px #00ff00;
+    box-shadow: 0px 0px 9px 3px #00ff00;
+}
+
+.quick_points .input-group{
+    flex-direction: column;
+}
+
+.quick_points .input-group .rounded-pill{
+    padding: 4px;
+    border: none !important;
+    justify-content: space-between;
+}
+
+.quick_points .input-group .form-control{
+    width: 98%;
+    margin: 1%;
+}
+
+.ctext-wrap {
+    background: #d5eef7;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 12px;
+    position: relative;
+}
+.chat-avatar{
+    width: 51px !important;
+    border-radius: 58% !important;
+}
+.conversation-list-box{
+    height: calc(100vh - 255px);
+    overflow: auto;
+}
+.conversation-list .chat-avatar img{
+    height: 51px;
+    width: 51px;
+}
+.conversation-list .conversation-text, .conversation-list .odd .conversation-text {
+    width: max-content !important;
+    max-width: 70% !important;
+}
+.conversation-list li .conversation-actions{
+    float: none;
+}
+.conversation-list .odd .conversation-actions{
+    float: right;
+}
+.conversation-list li:hover .conversation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.3rem;
+    align-items: start;
+    width: min-content;
+}
+.conversation-actions .btn{
+    height: 1.7rem;
+    width: 1.7rem;
+    padding: 0.2rem 0.25rem
+}
+
+.replay-to-message-wrap{
+    background: #ffe1e787;
+    border-radius: 3px;
+    padding: 1px 12px;
+    position: relative;
+    font-size: small;
+    margin-bottom: -1em;
+    padding-right: 3em;
+    margin-right: 1em;
+}
+
+.support_page{
+    margin-top: -80px;
+    height: calc(100vh - 70px);
+}
+
+.add_product_page{
+    margin-top: -30px;
+}
+
+.support_page>div{
+    height: 100%;
+    overflow: auto;
+}
+
+#wrapper {
+    min-height: 100vh;
+    height: auto;
+}
+
+#sidebar-menu{
+    background: #fff;
+}
+
+.auth-fluid .auth-fluid-right{
+    padding: 0;
+    overflow : hidden
+}
+.auth-fluid .auth-fluid-right .glide__slide{
+    padding: 6rem 3rem;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.auth-user-testimonial{
+    background: #00000099;
+    width: fit-content;
+    max-width: 90%;
+    margin: 0 20px;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 100%;
+}
+
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    cursor: col-resize;
+}
+
+.file_list a{
+    overflow: hidden;
+    white-space: nowrap!important;
+}
+
+.file_list, .file_holder {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#fullscreen_window{
+    height: calc(100vh - 160px);
+}
+
+#fullscreen_window:fullscreen{
+    height: calc(100vh - 10px);
+}
+
+@media screen and (max-width: 767px) {
+    .vw90 {
+        width: auto;
+    }
+    .vw50{
+        width: auto;
+    }
+    .vw70{
+        width: auto;
+    }
+    .vw80{
+        width: auto;
+    }
+    .support_page {
+        margin-top: -105px;
+    }
+}
+
+@media (min-width: 992px){
+    .auth-brand {
+        position: static !important;
+    }
+    body[data-sidebar-size=condensed]:not([data-layout=compact]):not(.auth-fluid-pages) {
+        min-height: 100vh;
+    }
+}

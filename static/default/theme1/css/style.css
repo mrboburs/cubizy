@@ -1,0 +1,13 @@
+
+.main_page_background{
+    padding: 40vh 10vw;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.page_holder{
+    overflow-x: hidden;
+    background-color: #efefef;
+    border-radius: 1em;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+
+    <link href="/minton/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="/quill/quill.snow.css" rel="stylesheet" >
+    <link href="/minton/css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+    <link href="/minton/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled />
+    <link href="/minton/css/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet"disabled />
+    <link rel="stylesheet" href="/grapesjs/grapes.min.css">
+    <link rel="stylesheet" href="/grapesjs/grapesjs-preset-webpage.min.css">
+    <!-- icons -->
+    <link href="/minton/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/vue-form-wizard/vue-form-wizard.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/icons/_fontawesome-all.css">
+    <link rel="stylesheet" href="/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/waves/waves.min.css">
+    <link rel="stylesheet" href="/css/userpanel.css">
+
+    <link rel="stylesheet" href="/glide/css/glide.core.min.css">
+    <link rel="stylesheet" href="/glide/css/glide.theme.min.css">
+
+    <title>{{.Account.Title}}</title>
+    <meta property="og:title" content="{{.Account.Title}}">
+    <meta property="og:type" content="{{.Account.Description}}">
+    <meta property="og:url" content="{{.CanonicalUrl}}">
+    <meta property="og:image" content="{{.Account.Banner}}">
+    <meta name="keywords" content="{{.Account.Keywords}}">
+    <meta name="description" content="{{.Account.Title}}, {{.Account.Description}}">
+    <meta name="logo" content="{{.Account.Logo}}">
+    <meta name="logo_wide" content="{{.Account.WideLogo}}">
+    <meta name="author" content="Vikram Mali" />
+
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/jpg" href="{{.Account.Logo}}" />
+    <link rel="apple-touch-icon" href="{{.Account.Logo}}">
+    <!-- Place favicon.ico in the root directory -->
+    <script>
+        window.application = {
+            AppName : {{.AppName}},
+            BaseDomin : {{.BaseDomin}},
+            Account : JSON.parse({{.Account.ToJson}}) ,
+            {{if .Account.ThemeSettings}}
+                ThemeSettings : JSON.parse({{.Account.ThemeSettings}}),
+            {{end}}
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/js/lodash.js"></script>
+    <script src="/js/vue.js"></script>
+    <script src="/js/vuex.js"></script>
+    <script src="/js/vue-router.js"></script>
+    <script src="/quill/katex.min.js" async></script>
+    <script src="/quill/highlight.min.js" async></script>
+    <script src="/quill/quill.min.js" async></script>
+    <script src="/waves/waves.min.js" type="text/javascript"></script>
+    <script src="/glide/glide.min.js" type="text/javascript"></script>
+    <script src="/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/ace-builds/src-min-noconflict/ext-language_tools.js" type="text/javascript"></script>
+    <script src="/ace-builds/src-min-noconflict/ext-statusbar.js" type="text/javascript"></script>
+    <script src="/ace-builds/src-min-noconflict/ext-options.js" type="text/javascript"></script>
+    <script src="/ace-builds/src-min-noconflict/ext-beautify.js" type="text/javascript"></script>
+    <script src="/vue-form-wizard/vue-form-wizard.js" async></script>
+    <script src="/momentjs/moment.js"></script>
+    <script src="/grapesjs/grapes.min.js"></script>
+    <script src="/grapesjs/grapesjs-preset-webpage.min.js"></script>
+    <script src="/js/userpanelcomponents.js"  type="module" ></script>
+    <script src="/vue/app.js" type="module"></script>
+    <script src="/js/split.min.js" async></script>
+    <script>
+        const zeroPad = (num, places) => String(num).padStart(places, '0')
+        // ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        Waves.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html>
+<title>Firebase Messaging Demo</title>
+<style>
+    div {
+        margin-bottom: 15px;
+    }
+</style>
+
+<body>
+    <div id="token"></div>
+    <div id="msg"></div>
+    <div id="notis"></div>
+    <div id="err"></div>
+    <script>
+        MsgElem = document.getElementById("msg")
+        TokenElem = document.getElementById("token")
+        NotisElem = document.getElementById("notis")
+        ErrElem = document.getElementById("err")
+    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+        import { getMessaging, onMessage, getToken } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-messaging.js";
+        //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBf7AwqeQMMUmzAm8uRZaWidhiif1iuZ-w",
+            authDomain: "mystudy-f4eaa.firebaseapp.com",
+            projectId: "mystudy-f4eaa",
+            storageBucket: "mystudy-f4eaa.appspot.com",
+            messagingSenderId: "898225550263",
+            appId: "1:898225550263:web:41fb5dc4f38afea8572e32",
+            measurementId: "G-8FN1H0KLF7"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // Get registration token. Initially this makes a network call, once retrieved
+        // subsequent calls to getToken will return from cache.
+        const messaging = getMessaging();
+
+        Notification.requestPermission().then(function () {
+            MsgElem.innerHTML = "Notification permission granted."
+            console.log("Notification permission granted.");
+            // get the token in the form of promise
+            return getToken(messaging, { vapidKey: 'BNKoF2jejV_SCKM8-dWS3KT7hAbmXWsF1MD8OIGA1kGRW-dAxDDWkGTbCi-fcXAhdnAlBhUGJretJROhcRCBSD4' })
+        }).then(function (token) {
+            // print the token on the HTML page
+            TokenElem.innerHTML = "Device token is : <br>" + token
+        }).catch(function (err) {
+            ErrElem.innerHTML = ErrElem.innerHTML + "; " + err
+            console.log("Unable to get permission to notify.", err);
+        });
+
+        // Handle incoming messages. Called when:
+        // - a message is received while the app has focus
+        // - the user clicks on an app notification created by a service worker
+        //   `messaging.onBackgroundMessage` handler.
+        onMessage(messaging, (payload) => {
+            console.log('Message received. ', payload);
+            debugger
+            // ...
+        });
+        //
+    </script>
+</body>
+
+</html>
